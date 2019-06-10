@@ -368,7 +368,7 @@
     Register --test-no TOOL-5126 --weight L --network NO --category security --description "Check for active OSSEC analysis daemon"
     if [ ${SKIPTEST} -eq 0 ]; then
 
-        if IsRunning "ossec-analysisd"; then
+        if IsRunning "ossec-analysisd" || IsRunning "ossec-agentd"; then
             IDS_IPS_TOOL_FOUND=1
             LogText "Result: OSSEC analysis daemon is active"
             Report "ids_ips_tooling[]=ossec"

@@ -2,3 +2,5 @@
 .bzrignore
 custom.prf
 *.swp
+.idea
+*.iml
